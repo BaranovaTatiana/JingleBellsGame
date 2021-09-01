@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED2DA3EA-496F-49D4-BE17-9E0CF3BCD42D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JingleBellsGame</RootNamespace>
+    <AssemblyName>JingleBellsGame</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bonuses.cs" />
+    <Compile Include="Frames.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="IGameObject.cs" />
+    <Compile Include="LanguageGame.cs" />
+    <Compile Include="Lava.cs" />
+    <Compile Include="NameShapeParameters.cs" />
+    <Compile Include="Portals.cs" />
+    <Compile Include="Prizes.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="GameResources.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="ShapeParameters.cs" />
+    <Compile Include="SizeShapeParameters.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="SnowFlakes.cs" />
+    <Compile Include="TypeShapeParameters.cs" />
+    <Compile Include="VisibleBlocks.cs" />
+    <Compile Include="MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\miamanueva.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\winter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\snowflakes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\snowflake3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Snowflake2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\snowflake1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smallblock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bonus.png" />
+    <Resource Include="Images\prize1.png" />
+    <Resource Include="Images\prize2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bigblock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smallblock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smallblock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BigB2.png" />
+    <Resource Include="Images\BigB4.png" />
+    <Resource Include="Images\SmallB3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BigB1.png" />
+    <Resource Include="Images\BigB3.png" />
+    <Resource Include="Images\SmallB1.png" />
+    <Resource Include="Images\SmallB2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Lava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\prize3.png" />
+    <Resource Include="Images\prize4.png" />
+    <Resource Include="Images\prize5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\prize6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Lava3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="music\Up.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\newLevel.png" />
+    <Resource Include="Images\door1.png" />
+    <Resource Include="Images\door.jpg" />
+    <Resource Include="Images\mess1.png" />
+    <Resource Include="Images\mess2.png" />
+    <Resource Include="Images\mess3.png" />
+    <Resource Include="Images\mess4.png" />
+    <Resource Include="Images\mess6.png" />
+    <Resource Include="Images\mess5.png" />
+    <Resource Include="Images\Menu.png" />
+    <Resource Include="Images\Score.png" />
+    <Content Include="music\Down.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\bells.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\bonusCl.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\bonusHo.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\win.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\bonus2.png" />
+    <Resource Include="Images\bonus1.png" />
+    <Content Include="music\bonusWAW1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\bonusWAW2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\mainmuse.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\portal.png" />
+    <Content Include="music\lava1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\prize7.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

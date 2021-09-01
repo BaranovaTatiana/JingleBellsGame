@@ -1,0 +1,51 @@
+﻿<Window x:Class="JingleBellsGame.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JingleBellsGame"
+        mc:Ignorable="d"
+        Title="Меню" Height="330" Width="570"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency = "true"
+        WindowStyle = "None">
+    <Border  Background = "#BA457CCB" CornerRadius="40">
+        <Grid x:Name="GridMenu" >
+            <StackPanel x:Name="PanelParametersGame" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 25">
+                <Button x:Name="Restart" Content="Restart" Background="#FF3E4EC6" Click="Restart_OnClick"></Button>
+                <Button x:Name = "Resume" 
+                        IsCancel="True"
+                        FontWeight="Black" FontSize="30" Content="Resume" Width="140" 
+                            Height="80" Click="Resume_OnClick" Background="#FF81D1FF" Foreground="#FF073758"></Button>
+                <Button x:Name="Exit" Content="Exit" Background="#FF3E4EC6" Click="Exit_OnClick"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 15 0 0">
+                <Button x:Name="Language" Background="#FF81D1FF" Content="Language" Click="Language_OnClick"></Button>
+                <Button x:Name ="Volume" Background="#FF81D1FF" Content ="Volume" Click="Volume_OnClick" ></Button>
+            </StackPanel>
+            <Button x:Name="BigRestart" Height="150" Width="150" Visibility="Collapsed" FontWeight="Black" FontSize="35" Content ="Restart" Click="Restart_OnClick"  Background="#FF81D1FF" Foreground="#FF073758"></Button>
+            <Button x:Name="OffVolume" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin ="0 60 25 0"  Background="#FF81D1FF" Content="Off" Visibility="Collapsed" FontWeight="Black" Click="OffVolume_OnClick" ></Button>
+           
+            <Slider x:Name="SliderValue" Visibility="Collapsed" Orientation="Vertical" Width="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Height="190" Minimum="0" Maximum="0.7" Margin =" 0 0 60 25"
+                  ValueChanged="SliderValue_OnValueChanged" LargeChange="0.1">
+            </Slider>
+            <!--<StackPanel x:Name="PanelLanguage" Opacity="0">
+            <Button x:Name="Russian" Content="Russian" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Chartreuse" />
+            <Button x:Name="English" Content="English" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Chartreuse" />
+        </StackPanel>-->
+            <Border x:Name ="BorderLanguage" CornerRadius="65" Background="#FF81D1FF" Width="190" Margin="13 40 0 0 " HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed">
+                <TextBlock x:Name="LanguageChoice" Text="Take a dictionary and translate it yourself!" 
+                         FontSize="23"   TextWrapping ="Wrap"
+                       TextAlignment="Center" Padding="25"   FontWeight="Black" FontFamily="./Fonts/#Miama Nueva"/>
+            </Border>
+            <Border x:Name="ForWinner" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="50 20 50 0" Background="#FFCBFF2A" CornerRadius="50">
+                <TextBlock Text="Congratulations! You are the winner! Next level to be continued!" FontFamily="./Fonts/#Miama Nueva" TextWrapping="Wrap"
+                           TextAlignment="Center" Padding="10"   FontWeight="Black" FontSize="33" >
+                    
+                </TextBlock>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
+

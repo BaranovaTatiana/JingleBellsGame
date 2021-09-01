@@ -1,0 +1,96 @@
+﻿<Window x:Class="JingleBellsGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="417" Width="770" ResizeMode="NoResize"
+        WindowStyle = "None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Loaded="MainWindow_OnLoaded"
+        x:Name="MWindow">
+    
+
+        <Border Height="417" Width="770" CornerRadius="20" >
+            <!--<Border.Background>
+            <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 0.081">
+                <GradientStop Color="#0055BBFE" Offset="0.01"></GradientStop>
+                <GradientStop Color="#55BBFE" Offset="1" />
+            </LinearGradientBrush>
+        </Border.Background>-->
+            <Border.Background>
+            <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1" >
+                    <GradientStop Color="#0055BBFE" Offset="0"></GradientStop>
+                    <GradientStop Color="#55BBFE" Offset="0.08" />
+                    <!--<GradientStop Color="#55BBFE" Offset="0.95" />-->
+                <!--<GradientStop Color="#FFFFFF" Offset="0.983"></GradientStop>-->
+                    <!--<GradientStop Color="#55BBFE" Offset="0.94" />
+                <GradientStop Color="#FFFFFF" Offset="1"></GradientStop>-->
+
+            </LinearGradientBrush>
+            </Border.Background>
+
+
+
+
+        <!--<Border Background= "#55BBFE" CornerRadius="20" Height="400" Width="720" VerticalAlignment="Bottom" Opacity="0" >-->
+
+        <Grid x:Name="MGrid">
+
+            
+            <Canvas x:Name ="BCanvas" Grid.ColumnSpan="4">
+                <Button x:Name="ButtonMenu" Width = "102" Height = "35" Style="{StaticResource UsButton}" Panel.ZIndex="2" Opacity="0">
+                    
+                </Button>
+                <TextBlock x:Name="GameOverText" Text="Game Over!" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="./Fonts/#Miama Nueva"
+                           FontSize="100 " FontWeight="Black" Opacity="0" Canvas.Top="150" Canvas.Left="70" Panel.ZIndex="100"/>
+                
+
+                
+                <!--Grid.ColumnSpan="4"--> 
+           <!--<Image x:Name ="HeroEllipse" Canvas.Top="370" Canvas.Left="0" Height="50" Width="50" >
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="25" CenterY="25" x:Name="HeroEllipseRotateTransform"/>
+                </Image.RenderTransform>
+            </Image>-->
+                                                        
+            <!--MediaOpened=""CreateLava"  MediaEnded="Element_MediaEnded"/>-->
+            <!--<Image Source="Images/bigblock.png" Height="150" Width="461"/>-->
+
+            <!--<Rectangle x:Name="Block1" Fill="Red" Height="30" Canvas.Top="329" Width="90" Canvas.Left="211" />
+            <Rectangle x:Name="Block2" Fill="Green" Height="125" Canvas.Left="446" Canvas.Top="175" Width="130" />
+            <Rectangle x:Name="Block3" Fill="Red" Height="30" Canvas.Top="235" Width="90" Canvas.Left="306" />
+            <Rectangle x:Name="Block4" Fill="Red" Height="30" Canvas.Top="329" Width="90" Canvas.Left="501" />
+            <Rectangle x:Name="Block5" Fill="Red" Height="30" Canvas.Top="235" Width="90" Canvas.Left="715" />
+            <Rectangle x:Name="Block6" Fill="Red" Height="30" Canvas.Left="920" Canvas.Top="329" Width="105"/>
+            <Rectangle x:Name="Block7" Fill="Green" Height="59" Canvas.Left="1170" Canvas.Top="235" Width="70"/>
+            <Rectangle x:Name="Block8" Fill="Red" Height="30" Canvas.Left="2245" Canvas.Top="329" Width="110" RenderTransformOrigin="0.679,2.525"/>
+            <Rectangle x:Name="Block9" Fill="Green" Height="59" Canvas.Left="1430" Canvas.Top="329" Width="70"/>
+            <Rectangle x:Name="Block10" Fill="Red" Height="59" Canvas.Left="2605" Canvas.Top="206" Width="75"/>
+            <Rectangle x:Name="Block11" Fill="Red" Height="35" Canvas.Left="2040" Canvas.Top="125" Width="120" RenderTransformOrigin="0.571,0.915"/>
+            <Rectangle x:Name="Block12" Fill="Green" Height="59" Canvas.Left="1870" Canvas.Top="235" Width="60"/>
+            <Rectangle x:Name="Block13" Fill="Red" Height="30" Canvas.Left="1615" Canvas.Top="310" Width="105"/>
+            <Rectangle x:Name="Block14" Fill="Red" Height="35" Canvas.Left="1305" Canvas.Top="125" Width="130"/>
+            <Rectangle x:Name="Block15" Fill="Green" Height="35" Canvas.Left="2775" Canvas.Top="324" Width="130"/>-->
+        </Canvas>
+        <Border Height="20" Width="770" CornerRadius="20" Panel.ZIndex="10000" Margin="0,397,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5 0 " EndPoint="0.5 1" >
+                        <!--<GradientStop Color="#0055BBFE" Offset="0"></GradientStop>
+                            <GradientStop Color="#55BBFE" Offset="0.08" />-->
+                        <GradientStop Color="#00FFFFFF" Offset="0" />
+                        <GradientStop Color="#FFFFFF" Offset="0.99"></GradientStop>
+
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+</Grid>
+            
+        <!--//</Border>-->
+
+        </Border>
+    
+</Window>
